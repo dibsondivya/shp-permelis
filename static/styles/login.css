@@ -1,0 +1,44 @@
+html{
+    zoom: 75%;
+    transform-origin: 0 0;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: center center;
+}
+
+body{
+    font-family: myriad-pro, sans-serif;
+    font-size: 20px;
+    background-color:#f47921;
+}
+
+/* header styles */
+.well{
+    background-color: white; 
+    padding: 20px;
+}
+
+#headerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+#titlediv {
+    display: block;
+}
+
+#titlediv h2{
+    text-align: center;
+}
+/* end header styles */
+
+
+#adminloginform{
+    border: 2px solid #fed9bc;
+    background-color: #fed9bc;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 10%;
+}

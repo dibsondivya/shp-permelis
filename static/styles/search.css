@@ -1,0 +1,296 @@
+/* modal styles */
+.modal-body{
+    overflow:auto;
+    overflow-y: auto;
+}
+.modal-dialog{
+    overflow-y: initial !important
+}
+/* .modal-scrollbar-measure {
+    overflow: hidden!important; 
+} */
+.modal-backdrop {
+    display: none;    
+}
+/* end modal styles */
+
+/* modal view in mobile */
+@media only screen and (max-width: 768px) and (orientation: portrait){
+    #empModal{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0;
+        width: 80%;
+        height: 80%;
+        position: fixed;
+        left: 10%;
+        right: 10%;
+        top: 10%;
+        bottom: 10%;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .alert-box{
+        width: 300px;
+        height: 120px;        
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -60px; /* Negative half of height. */
+        margin-left: -150px; /* Negative half of width. */
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        padding: 20px;
+        border: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 5%;
+        color: white;
+        background-color: rgba(0,0,0,0.75);
+        border-color: rgba(0,0,0,0.77);
+        display: none;
+        z-index: 1500000;
+    }
+
+    #modaltable td {
+       display: table-row;
+       max-width: 100%;
+       max-height: 80%;
+       font-size: 15px;
+    }
+    #modaltable img {
+        margin-bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        display: block;
+    }
+
+}
+/* end modal view in mobile */
+
+/* modal view in mobile landscape */
+@media (min-width: 576px) and (max-width: 767.99px) and (orientation: landscape) {
+    #empModal{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0;
+        width: 90%;
+        height: 90%;
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        top: 5%;
+        bottom: 5%;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    .alert-box{
+        width: 300px;
+        height: 120px;        
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -60px; /* Negative half of height. */
+        margin-left: -150px; /* Negative half of width. */
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        padding: 20px;
+        border: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 5%;
+        color: white;
+        background-color: rgba(0,0,0,0.75);
+        border-color: rgba(0,0,0,0.77);
+        display: none;
+        z-index: 1500000;
+    }
+
+    #modaltable {
+        justify-content: center; 
+        align-items: center; 
+        display: flex; 
+        max-width: 100%;
+        table-layout: fixed;
+        padding: 7px;
+    }
+    #modaltable td {
+        display: table-cell;
+        width: 50%;
+        font-size: 15px;
+    }
+    #modaltable img {
+        width: 100%;
+        padding-right: 5%;
+    }
+}
+/* end modal view in mobile landscape */
+
+
+
+/* modal view in desktop */
+@media only screen and (min-width: 768px) {
+    #empModal{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0;
+        width: 90%;
+        height: 90%;
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        top: 5%;
+        bottom: 5%;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        overflow:auto;
+    }
+    
+    .alert-box{
+        width: 300px;
+        height: 100px;        
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -60px; /* Negative half of height. */
+        margin-left: -150px; /* Negative half of width. */
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        padding: 20px;
+        border: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 5%;
+        color: white;
+        background-color: rgba(0,0,0,0.75);
+        border-color: rgba(0,0,0,0.77);
+        display: none;
+        z-index: 1500000;
+    }
+
+    #modaltable {
+        justify-content: center; 
+        align-items: center; 
+        display: flex; 
+        max-width: 100%;
+        table-layout: fixed;
+        padding: 7px;
+    }
+    #modaltable td {
+        width: 50%;
+        font-size: 17px;
+    }
+    #modaltable img {
+        width: 100%;
+        padding-right: 5%;
+    }
+}
+/* end modal view in desktop */
+
+/* layout for result boxes */
+#searchLayout {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+/* end layout for result boxes */
+
+.pt-100 {
+    padding-top: 2%;
+}
+.pb-70 {
+    padding-bottom: 2%;
+}
+
+/* outline for boxes */
+.single-publication {
+    border: 2px solid #f2eee2;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fafafa;
+    border-radius: 10px;
+    max-width: 263px; 
+    /*width: 270px;*/
+    display: table-cell;
+}
+/* end outline for boxes */
+
+/* placement of image box */
+.single-publication figure {
+    position: relative;
+    margin: 0;
+    width: 263px; 
+    height: auto; 
+    min-height: 220px; 
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+
+}
+/* end placement of image box */
+
+/* box around image */
+.single-publication figure > a {
+   width: 263px; 
+   height: 220px;
+   display: table-cell;
+   background-color: #fafafa;
+   vertical-align: middle;
+   justify-content: center;
+   align-items: center;
+}
+/* end box around image */
+
+/* image formatting */
+.single-publication figure > a > img{
+    max-width: 220px; 
+    max-height: 220px; 
+    width: auto; 
+    height: auto;  
+    margin: 0 auto; 
+    vertical-align: middle;
+}
+/* end image formatting */
+
+ /* align text within box */
+.single-publication .publication-content {
+    text-align: center;
+    padding: 20px;
+}
+ /* end align text within box */
+
+/* added to cart alert */
+.alert-box .icon i.fa {
+    font-size:30px;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    vertical-align: middle;
+} 
+
+.alert-box > p{
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+}
+/* end added to cart alert */
+
+
+/* END */

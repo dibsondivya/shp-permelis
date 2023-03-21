@@ -1,0 +1,98 @@
+html{
+    zoom: 75%;
+    transform-origin: 0 0;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: center center;
+}
+
+body{
+font-family: myriad-pro, sans-serif;
+overflow-x: hidden;
+overflow-y: scroll !important;
+}
+
+html, body {
+    height: 100%;  
+}
+
+/* for mobile phones: */
+@media only screen and (max-width: 768px){
+    #headerImage {       
+        float: left;
+        width: 100%;
+    }
+    #headerButton {
+        display: none;
+    }
+    #search_button{
+        width: 100%;
+    }
+}
+/* end for mobile phones: */
+
+/* for desktops: */
+@media only screen and (min-width: 768px){
+    #headerImage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    #headerButton {
+        float: right; 
+        padding-right: 20px;
+    }
+}
+/* end for desktops: */
+
+/* header styles */
+.well{
+    background-color: white; 
+    padding: 20px; 
+    margin-bottom: 0px;
+}
+
+#titlediv {
+    display: block;
+}
+
+#pilldiv {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+/* end header styles */
+
+/* split screen styles */
+#split {
+    min-height: 100vh; 
+    max-height: 100%;
+}
+
+#leftcol{
+    background-color:#fed9bc; 
+    padding: 20px;
+}
+
+#rightcol {
+    background-color:#fbb785;
+    padding: 20px;
+}
+/* end split screen styles */
+
+/* to prevent copy and save of image */
+img {
+    pointer-events: none;
+}
+/* end to prevent copy and save of image */
+
+/* to prevent 'print' in browser */
+@media print {
+html, body {
+display: none;  /* hide whole page */
+}
+}
+/* end to prevent 'print' in browser */
+
+
+/* END */

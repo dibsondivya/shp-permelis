@@ -1,0 +1,73 @@
+html{
+    zoom: 75%;
+    transform-origin: 0 0;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: center center;
+}
+
+body{
+    font-family: myriad-pro, sans-serif;
+    background-color: white;
+}
+
+/* header styles */
+.well{
+    background-color: white; 
+    padding: 20px;
+}
+
+#headerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+#titlediv {
+    display: block;
+}
+
+#titlediv h2{
+    text-align: center;
+}
+
+#titlediv h4{
+    text-align: center;
+    color: red;
+
+}
+/* end header styles */
+
+/* format image details in edit page */
+#imagelabel {
+    position:relative; 
+    display: flex;
+}
+
+#editImage {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 75%;
+}
+
+#editimgname {
+    text-align: center;
+}
+
+#buttonbox{
+    display:flex ; 
+    position: relative; 
+    text-align: center;  
+    align-items: center; 
+    justify-content: center; 
+    vertical-align: middle;
+}
+
+#changedoutput{
+    display:none;
+}
+/* end format image details in edit page */
+
+
+/* END */

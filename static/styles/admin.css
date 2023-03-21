@@ -1,0 +1,91 @@
+html{
+    zoom: 75%;
+    transform-origin: 0 0;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: center center;
+}
+
+body{
+    font-family: myriad-pro, sans-serif;
+    background-color: white;
+}
+
+/* header styles */
+.well{
+    background-color: white; 
+    padding: 20px;
+}
+
+#headerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+#titlediv {
+    display: block;
+}
+
+#titlediv h2{
+    text-align: center;
+}
+
+#titlediv h4{
+    text-align: center;
+    color: red;
+}
+/* end header styles */
+
+/* format content */
+.container{
+    width: 90%; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.dt-buttons {
+    color: pink;
+    }
+/* end format content */
+
+/* format modal buttons */
+#modalbuttonleft{
+    display:inline-block;
+    position:relative;
+    float:left;
+}
+
+#modalbuttonright{
+    display:inline-block;
+    position:relative;
+    float:right;
+}
+
+#modalbuttonleftmed{
+    display:inline-block;
+    position:relative;
+    float:left;
+}
+
+#modalbuttonrightadmin{
+    display:inline-block;
+    position:relative;
+    float:right;
+}
+/* end format modal buttons */
+
+/* format admin table */
+#medtable {
+    width: 100%;
+}
+/* end format admin table */
+
+/* format modal */
+.modal-body {
+    padding: 30px;
+}
+/* end format modal */
+
+   
+/* END */
