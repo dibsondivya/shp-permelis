@@ -1,11 +1,15 @@
 # PERMELIS
-Permelis is a searchable image-based medication database that facilitates the printing of personalised medication lists for patients.
+[Permelis](http://shp.permelis.com) is a searchable image-based medication database that facilitates the printing of personalised medication lists for patients.
+<img width="1266" alt="Screenshot 2023-03-21 at 3 05 19 AM" src="https://user-images.githubusercontent.com/56643379/226508786-078f0c03-9a6d-46c6-9859-727d8eee169d.png">
 
 ## Key Features
 * Real-time search results based on purpose, name and side effects of medications
 * Side-by-side view of search results and cart
 * Easy access to medication information through modal dialog
 * Add, Edit and Delete options for administrator
+
+https://user-images.githubusercontent.com/56643379/226509153-f30907dc-a68a-441c-9a75-896f5a2a3095.mp4
+
 
 ## Installation
 Local version of Permelis currently requires a MySQL client for database management and Python 3.7's Flask for the server-side. MySQL 8.0 is recommended.
