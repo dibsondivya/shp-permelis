@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <title>PERMELIS - Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.6/jqBootstrapValidation.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login.css') }}" />
+</head>
+<body>
+    <div class="well">
+        <div id="headerButton">
+            <a href="{{ url_for('index') }}"><button class="btn btn-danger">Back</button></a>
+        </div>
+        <img src='/static/icons/Permelis-2.png' id="headerImage">
+        <div id="titlediv">
+            <h2>Admin Login</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4" id="adminloginform">
+                <form action="/loginsubmit" method="POST" autocomplete="off">
+                    <div class="form-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Username" required="required" data-validation-required-message="Please enter your Username">
+                            <p class="text-danger help-block"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                          <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" required="required" data-validation-required-message="Please provide your password">
+                          <p class="text-danger help-block"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div id="success"></div>
+                        <div class="controls">
+                        <button class="btn btn-success btn-block" type="submit" id="send_button">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</html>

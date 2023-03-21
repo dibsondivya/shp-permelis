@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />    
+    <title>PERMELIS - Admin Edit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/edit.css') }}" />
+</head>
+<body>
+    <div class="well">
+        <a href="{{ url_for('adminview') }}"><button class="btn btn-danger">Cancel</button></a>
+        <img src='/static/icons/Permelis-2.png' id="headerImage">
+        <div id="titlediv">
+          <h2>Admin Edit</h2>
+          <h4>User: {{ username }}</h4>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {{ messages[0] }}
+            </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <div class="panel panel-default panel-body">
+            <form action="/adminupdate/{{drug.0}}" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="entry">Entry</label>
+                <input type="text" name="entry" value="{{drug.1}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="img" id="imagelabel">Image</label>
+
+                <p id="editimgname">{{drug.2}}</p>
+                <img src="/static/images/{{drug.2}}" id="editImage">
+
+                <div id="changedoutput">
+                  <img id="output">
+                </br>
+                  <div id='buttonbox'>
+                    <button type="button" class="btn btn-danger" id='canceleditbutton'>Cancel</button>
+                    <button type="button" class="btn btn-success" id='confirmbutton'>Confirm</button>
+                  </div>
+                </div>
+                
+              <input type="file" name="img" id="fileinputofimage" class="form-control" placeholder="Change Image" accept="image/*" onchange="loadFile(event)">
+                <p class="help-block">Supported file types are .jpg, .jpeg and .png.</p>
+                <p class="help-block">Optimal image size is 200px by 200px.</p>
+
+              </div>
+              <div class="form-group">
+                <label for="purpose">Purpose</label>
+                <input type="text" name="purpose" value="{{drug.8}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="brand">Brand</label>
+                <input type="text" name="brand" value="{{drug.3}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="generic">Generic</label>
+                <input type="text" name="generic" value="{{drug.4}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="cost">Cost</label>
+                <input type="text" name="cost" value="{{drug.5}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="details">Details</label>
+                <input type="text" name="details" value="{{drug.6}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="keywords">Keywords</label>
+                <input type="text" name="keywords" value="{{drug.7}}" class="form-control">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">
+                  Update
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+     
+<script src="{{ url_for('static', filename='js/edit.js') }}"></script>
+
+</body>
+
+</html>

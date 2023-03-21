@@ -1,0 +1,51 @@
+<div id="deleteremark" class="btn btn-success" style="display:none;width:100%;margin-bottom: 10px;"></div>
+
+<div class="cartremark">
+</br>
+<p align="center">There are currently no medications in your medication list.</p>
+</br>
+<p align="center">Search for medications and add them to your medication list.</p>
+</div>
+
+{% block content %}
+<div class="content">
+    <table class="table table-striped custab" id="carttable">
+        <thead>
+            <tr>
+                <th width="120">Picture</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in drugcartlist %}
+        <tr>
+            <td><a href="#" id="{{row.0}}" title=" "><img src="/static/images/{{row.2}}"  width="150"></a></td>
+            <td>{{row.1}}</td>
+            <td><a data-id="{{loop.index0}}" class="emptyButton"><button class="btn btn-success" id="emptyButton">Delete</button></a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div style="float: left;  padding-left: 20px;"">
+    <a class="emptyallButton"><button class="btn btn-success">Delete All</button></a>
+    </div>
+    <div style="float: right; padding-right: 20px;">
+    <a href="{{ url_for('printing') }}"><button class="btn btn-danger">Print</button></a>
+    </div>
+</div>
+{% endblock %}
+
+{% block cartstyle %}
+<link rel="icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+<style>
+    .content{
+        padding: 30px;
+    }
+</style>
+{% endblock %}
+
+{% block cartscript %}
+<script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+{% endblock %}

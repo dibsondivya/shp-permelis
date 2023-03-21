@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <title>PERMELIS - Print Out</title>
+    <!--<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div-->
+</head>
+<body>
+    <!-- Ensure full path is present for image output -->
+    <div style="display: inline-block;width: 100%;">
+        <img src="{{cwd}}/static/icons/Permelis-3.png" style="float:left; width: 25%;">
+        <img src="{{cwd}}/static/icons/SHP_Logo_1.png" style="float:right; width: 25%;">
+    </div>    
+    <br>
+    <div style="display: inline-block;width: 100%;">
+    <h2>My Personalized Medication List</h2>    
+    </div>
+    <div style="position: relative;">
+        <h4><span style="float:left; width:79%; display: inline-block;">Name:________________________________________</span></h4>
+        <h4><span style="float:right; width:20%; display: inline-block;">Date:____________________</span></h4>
+    </div>
+
+</br>
+</br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th width="120">Picture</th>
+            <th width="100">Name</th>
+            <th><img src="{{cwd}}/static/icons/morning.png" width="60" height="60"></th>
+            <th><img src="{{cwd}}/static/icons/afternoon.png" width="60" height="60"></th>
+            <th><img src="{{cwd}}/static/icons/evening.png" width="60" height="60"></th>
+            <th width=300">Remarks</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in drugcartlist %}
+        <tr>
+            <!-- Ensure full path is present for image output -->
+            <td><a href='#' id="rowimg"><img src="{{cwd}}/static/images/{{row.2}}" width="100%"></a></td>
+            <td>{{row.1}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="text-align:left;vertical-align: top;"><p >{{row.8}}</p></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<style>
+html{
+    height: 100%;
+}
+    body{
+    margin: 0;
+    padding: 20px;
+    font-family: myriad pro, sans-serif;
+    height: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table td, .table th{
+    padding: 0px 0px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+/* to prevent copy and save of image */
+img {
+    pointer-events: none;
+}
+/* to prevent 'print' in browser */
+@media print {
+html, body {
+display: none;  /* hide whole page */
+}
+}
+</style>
+</body>
+</html>

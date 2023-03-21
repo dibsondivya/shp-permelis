@@ -1,0 +1,15 @@
+{% for row in druglist %} 
+<table id="modaltable">
+    <tr>
+        <td><img src="/static/images/{{row.2}}"></td>
+        <td>
+        <p>Entry : {{row.1}}</p>
+        <p>Purpose : {{row.8}}</p>
+        <p>Brand : {{row.3}}</p>
+        <p>Generic : {{row.4}}</p>
+        <p>Cost : {{row.5}}</p>
+        <p>Details : {{row.6}}</p>
+        </td>
+    </tr>
+</table>
+{% endfor %}

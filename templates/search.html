@@ -1,0 +1,64 @@
+{% block searchstyle %}
+<link rel="icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/search.css') }}" />
+{% endblock %}
+
+{% block result %}
+</br>
+<p style="text-align:center">{{  remark  }}</p>
+<section class="our-publication pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            {% for drug in druglist %}
+            <div class="col-sm-6 col-sm-6 col-lg-6 col-lg-6 col-xl-4 col-xl-4 col-xl-4" id="searchLayout">
+                    <div class="single-publication">
+                        <figure>
+                            <a data-id="{{ drug.0 }}" class="publicationimage">
+                                <img src="/static/images/{{ drug.2 }}">
+                            </a>
+                        </figure>
+                        <div class="publication-content">
+                            <span class="generic">{{ drug.4 }}</span>
+                            <h4><a data-id="{{ drug.0 }}" class="publicationname" id="name">{{ drug.1 }}</a></h4>
+                            <h3><span class="brand">{{ drug.3 }}</span></h3>
+                        </div>
+                        <a data-id='{{ drug.0 }}' class="addbutton"><button class="btn btn-success btn-block">Add</button></a>
+
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}
+
+{% block modaldiv %}
+<div class="alert-box">  
+    <div class="icon">
+        <i class="fa fa-check-circle"></i>
+    </div>      
+    <p>Added to PERMELIS!</p>
+</div>
+
+<div class="modal fade" id="empModal" role="dialog">
+<div class="modal-dialog">
+
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Medication Info</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+</div>
+</div>
+{% endblock %}
+

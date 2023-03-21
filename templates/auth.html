@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+    <title>PERMELIS - Personalized Medication List Made Easy</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/auth.css') }}" />
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Icon -->
+            <div class="fadeIn first">
+              <img src="/static/icons/PERMELISxSHP-04-01.png" id="icon" />
+            </div>
+        
+            <!-- Login Form -->
+            <form method="POST" action="/authcheck">
+              <input type="password" class="fadeIn second" name="auth" placeholder="Authentication Password">
+              <input type="submit" class="fadeIn third" value="Authenticate">
+            </form>
+
+          </div>
+    </div>
+</body>
+
+</html>
